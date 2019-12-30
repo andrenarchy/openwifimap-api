@@ -1,2 +1,2 @@
-# openwifimap-api
+# OpenWifiMap API
 REST API for OpenWifiMap
