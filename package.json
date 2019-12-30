@@ -1,0 +1,43 @@
+{
+  "name": "openwifimap-api",
+  "version": "1.0.0-alpha.1",
+  "description": "API for OpenWifiMap",
+  "main": "dist/http-server.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "lint": "tslint -p tsconfig.json src/**/*.ts",
+    "prepublishOnly": "npm run build",
+    "test": "mocha --opts ./mocha.opts",
+    "test-cover": "nyc npm test",
+    "test-cover-submit": "nyc report --reporter=json && codecov -f coverage/*.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrenarchy/openwifimap-api.git"
+  },
+  "author": "André Gaul <andre@gaul.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrenarchy/openwifimap-api/issues"
+  },
+  "homepage": "https://github.com/andrenarchy/openwifimap-api#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "codecov": "^3.6.1",
+    "mocha": "^6.2.2",
+    "nyc": "^15.0.0",
+    "ts-node": "^8.5.4",
+    "tslint": "^5.20.1",
+    "tslint-config-standard": "^9.0.0",
+    "typescript": "^3.7.4"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "@types/bunyan": "^1.8.6",
+    "bunyan": "^1.8.12"
+  }
+}
